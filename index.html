@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Store-Landing</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <header class="header">
@@ -14,17 +15,15 @@
         </a>
 
         <!-- Навігація -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">Categories</a></li>
-            <li><a href="#" class="nav__link">Deals</a></li>
-            <li><a href="#" class="nav__link">About</a></li>
-          </ul>
-        </nav>
-
-        <!-- Пошук і кнопки -->
-        <div class="header__actions">
+        <div class="header__center">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li><a href="#" class="nav__link">Home</a></li>
+              <li><a href="#" class="nav__link">Categories</a></li>
+              <li><a href="#" class="nav__link">Deals</a></li>
+              <li><a href="#" class="nav__link">About</a></li>
+            </ul>
+          </nav>
           <form class="search" role="search">
             <input
               type="search"
@@ -33,7 +32,9 @@
               aria-label="Search products"
             />
           </form>
-
+        </div>
+        <!-- Пошук і кнопки -->
+        <div class="header__actions">
           <button class="icon-btn basket" aria-label="Cart">
             <svg width="20" height="20"></svg>
           </button>
@@ -44,6 +45,240 @@
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <div class="container">
+        <aside class="filters" aria-labelledby="filters-title">
+          <h2 id="filters-title">Filters</h2>
+
+          <form class="filters-form">
+            <fieldset>
+              <legend>Categories</legend>
+
+              <ul class="categories">
+                <li class="categories__item">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="category"
+                      value="electronics"
+                    />
+                    Electronics</label
+                  >
+                </li>
+                <li class="categories__item">
+                  <label
+                    ><input type="checkbox" name="category" value="clothing" />
+                    Clothing</label
+                  >
+                </li>
+                <li class="categories__item">
+                  <label
+                    ><input type="checkbox" name="category" value="books" />
+                    Books</label
+                  >
+                </li>
+                <li class="categories__item">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="category"
+                      value="home-garden"
+                    />
+                    Home &amp; Garden</label
+                  >
+                </li>
+                <li class="categories__item">
+                  <label
+                    ><input type="checkbox" name="category" value="sports" />
+                    Sports</label
+                  >
+                </li>
+                <li class="categories__item">
+                  <label
+                    ><input type="checkbox" name="category" value="beauty" />
+                    Beauty</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Price Range</legend>
+
+              <label for="price-range">Price:</label>
+              <input
+                type="range"
+                id="price-range"
+                name="price"
+                min="0"
+                max="1000"
+              />
+            </fieldset>
+
+            <fieldset>
+              <legend>Minimum Rating</legend>
+
+              <ul class="rating">
+                <li class="rating__item">
+                  <label
+                    ><input type="radio" name="rating" value="4" /> 4 +</label
+                  >
+                </li>
+                <li class="rating__item">
+                  <label
+                    ><input type="radio" name="rating" value="3" /> 3 +</label
+                  >
+                </li>
+                <li class="rating__item">
+                  <label
+                    ><input type="radio" name="rating" value="2" /> 2 +</label
+                  >
+                </li>
+                <li class="rating__item">
+                  <label
+                    ><input type="radio" name="rating" value="1" /> 1 +</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </aside>
+
+        <section class="catalog" aria-labelledby="catalog-title">
+          <header class="catalog__toolbar">
+            <h2 class="catalog__title" id="catalog-title">Products</h2>
+
+            <div class="catalog__controls">
+              <div role="group" aria-label="View">
+                <button
+                  type="button"
+                  aria-pressed="true"
+                  aria-controls="products-list"
+                  data-view="grid"
+                  title="Grid View"
+                >
+                  b
+                </button>
+                <button
+                  type="button"
+                  aria-pressed="false"
+                  aria-controls="products-list"
+                  data-view="list"
+                  title="List View"
+                >
+                  b
+                </button>
+              </div>
+            </div>
+
+            <label for="sort">Sort By</label>
+            <select name="sort" id="sort">
+              <option value="relevance">Relevance</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating-desc">Rating: High to Low</option>
+            </select>
+          </header>
+
+          <ul class="catalog__list" id="products-list">
+            <li class="catalog__item"><article></article></li>
+            <li class="catalog__item"><article></article></li>
+            <li class="catalog__item"><article></article></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <!-- Блок бренду/опису -->
+        <section class="footer__brand" aria-labelledby="footer-brand-title">
+          <h2 id="footer-brand-title" class="visually-hidden">
+            About EliteStore
+          </h2>
+          <a href="#" class="logo"
+            ><span class="logo__letter">E</span>EliteStore</a
+          >
+          <p class="">
+            Your one-stop destination for quality products at unbeatable prices.
+            Shop with confidence and enjoy fast, reliable delivery.
+          </p>
+
+          <ul class="social" aria-label="Social media">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Facebook">Fb</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Twitter">Tw</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Instagram">Ig</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="YouTube">Yt</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Навігація: швидкі лінки -->
+        <nav class="footer__nav" aria-labelledby="footer-quicklinks-title">
+          <h2 id="footer-quicklinks-title">Quick Links</h2>
+
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </nav>
+
+        <!-- Навігація: категорії -->
+        <nav class="footer__nav" aria-labelledby="footer-categories-title">
+          <h2 id="footer-categories-title">Categories</h2>
+
+          <ul>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Home &amp; Garden</a></li>
+            <li><a href="#">Sports</a></li>
+          </ul>
+        </nav>
+
+        <!-- Підписка -->
+        <section class="footer__newsletter" aria-labelledby="footer-news-title">
+          <h2 id="footer-news-title">Stay Updated</h2>
+          <p>Subscribe to our newsletter for the latest deals and updates.</p>
+
+          <form class="newsletter-form">
+            <label for="newsletter-email" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <button type="submit" aria-label="Subscribe">Subscribe</button>
+          </form>
+
+          <p class="consent">
+            By subscribing, you agree to our Privacy Policy and Terms.
+          </p>
+        </section>
+      </div>
+
+      <div class="container footer__legal">
+        <small>© 2025 EliteStore. All rights reserved.</small>
+
+        <ul class="legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
