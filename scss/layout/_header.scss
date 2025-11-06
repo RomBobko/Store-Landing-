@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    
+
     padding-top: 12px;
     padding-bottom: 12px;
   }
@@ -68,9 +68,6 @@
   min-width: 360px;
 
   font-size: $font-size-base;
-  &__label {
-    @extend %visually-hidden;
-  }
 
   &__input {
     width: 100%;
@@ -81,6 +78,11 @@
     border: transparent;
     border-radius: $radius-lg;
   }
+}
+
+// header-search__label
+.visually-hidden {
+  @extend %visually-hidden;
 }
 
 .icon-btn {

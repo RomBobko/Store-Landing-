@@ -1,7 +1,19 @@
 .filters {
-    position: sticky;
-    max-width: 300px;
-    width: 100%;
-    padding: 15px;
-    outline: 1px solid red;
+  position: sticky;
+  top: 80px;
+  max-width: 300px;
+  width: 100%;
+  padding: 15px;
+
+//   border-color: $color-border;
+  border-radius: $radius-md;
+  outline: 1px solid teal;
+
+  &__title {
+    margin-bottom: 25px;
+    margin-left: 25px;
+
+    font-size: 18px;
+    font-weight: $font-weight-normal;
+  }
 }

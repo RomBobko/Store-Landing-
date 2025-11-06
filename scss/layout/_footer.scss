@@ -1,24 +1,67 @@
 .footer {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 45px;
+  padding-bottom: 40px;
 
+  color: $color-accent;
   background-color: $color-footer-bg;
   border-top: 1px solid $color-border;
+
+  &__logo {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+  }
 
   &__inner {
     display: flex;
     align-items: center;
+    gap: 50px;
+
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    font-weight: $font-weight-normal;
+
+    border-bottom: 1px solid #d1d1d1;
   }
 
   &__brand,
   &__nav,
   &__newsletter {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-width: 220px;
   }
 
-  &__brand-title {
-    @extend %visually-hidden;
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__brand-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  &__legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__legal-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 12px;
   }
 }
 
