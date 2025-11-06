@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  background-color: $color-footer-bg;
+  border-top: 1px solid $color-border;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__brand,
+  &__nav,
+  &__newsletter {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  &__brand-title {
+    @extend %visually-hidden;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    background-color: $color-input-bg;
+  }
+}

@@ -1,0 +1,98 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: $color-bg;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0;
+
+  color: $color-primary;
+
+  &__letter {
+    display: inline-block;
+    text-align: center;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+
+    color: $color-bg;
+    background: $color-primary;
+
+    border-radius: $radius-md;
+  }
+}
+
+.nav {
+  margin-right: 150px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.search {
+  max-width: 560px;
+  min-width: 360px;
+
+  font-size: $font-size-base;
+  &__label {
+    @extend %visually-hidden;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 14px;
+
+    background-color: $color-input-bg;
+    border: transparent;
+    border-radius: $radius-lg;
+  }
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+
+  // background-color: $color-bg;
+  border: none;
+  border-radius: $radius-lg;
+
+  // &:hover,
+  // &:focus {
+  //   background-color: $color-input-bg;
+  // }
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// /* ================================
+//    TYPOGRAPHY
+//    Підключай після reset/normalize
+//    Залежить від змінних з utils/_variables.scss
+//    ================================= */
+
+// /* БАЗА */
+// html {
+//   /* Гнучка база: 15–17px залежно від ширини екрана */
+//   font-size: clamp(15px, 1.1vw + 12px, 17px);
+// }
+
+// body {
+//   color: var(--color-text, #1a1a1a);
+//   background-color: var(--color-bg, #fff);
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// /* ТЕКСТОВІ РОЗМІРИ (rem відносно html) */
+// :root {
+//   --fs-xs: 0.75rem;  /* ~12px */
+//   --fs-sm: 0.875rem; /* ~14px */
+//   --fs-base: 1rem;   /* ~16px */
+//   --fs-lg: 1.125rem; /* ~18px */
+//   --fs-xl: 1.25rem;  /* ~20px */
+//   --fs-2xl: 1.5rem;  /* ~24px */
+//   --fs-3xl: 2rem;    /* ~32px */
+//   --fs-4xl: 2.5rem;  /* ~40px */
+// }
+
+// /* АБЗАЦИ, СПИСКИ */
+// p { font-size: var(--fs-base); margin: 0 0 0.75em; }
+// small, .text-sm { font-size: var(--fs-sm); }
+// .lead { font-size: var(--fs-lg); line-height: 1.65; color: var(--color-muted, #555); }
+
+// ul, ol {
+//   margin: 0 0 1em 1.25em;
+//   padding: 0;
+// }
+// li { margin: 0.25em 0; }
+
+// /* ЗАГОЛОВКИ */
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: var(--font-heading, var(--font-base, "Inter", system-ui));
+//   color: var(--color-heading, #0f172a);
+//   line-height: 1.25;
+//   margin: 0 0 0.5em;
+//   font-weight: 700;
+// }
+// h1 { font-size: clamp(2rem, 2.2vw + 1.2rem, 3rem); }   /* ~32–48px */
+// h2 { font-size: clamp(1.75rem, 1.6vw + 1rem, 2.5rem); }/* ~28–40px */
+// h3 { font-size: clamp(1.5rem, 1.2vw + 0.9rem, 2rem); } /* ~24–32px */
+// h4 { font-size: var(--fs-xl); }
+// h5 { font-size: var(--fs-lg); }
+// h6 { font-size: var(--fs-base); }
+
+// /* ПОСИЛАННЯ */
+// a {
+//   color: var(--color-link, #0ea5e9);
+//   text-decoration: none;
+// }
+// a:hover,
+// a:focus {
+//   color: var(--color-link-hover, #0284c7);
+//   text-decoration: underline;
+// }
+
+// /* ТЕКСТ-УТИЛІТИ */
+// .muted   { color: var(--color-muted, #6b7280); }
+// .semibold{ font-weight: 600; }
+// .bold    { font-weight: 700; }
+// .upper   { text-transform: uppercase; letter-spacing: 0.03em; }
+// .center  { text-align: center; }
+
+// /* КОРОТКІ ПАТЕРНИ ДЛЯ E-COM */
+// .price    { font-size: var(--fs-lg); font-weight: 700; }
+// .badge    { font-size: var(--fs-xs); font-weight: 600; padding: 0.25em 0.5em; border-radius: 999px; }
+// .caption  { font-size: var(--fs-xs); color: var(--color-muted, #6b7280); }
+// .helptext { font-size: var(--fs-sm); color: var(--color-muted, #6b7280); margin-top: 0.25rem; }
+
+// /* ФОРМИ (м’які плейсхолдери) */
+// ::placeholder { color: color-mix(in srgb, var(--color-text, #1a1a1a) 50%, transparent); opacity: 1; }

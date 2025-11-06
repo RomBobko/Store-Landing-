@@ -1,0 +1,19 @@
+.catalog {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  &__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }
+}

@@ -1,0 +1,36 @@
+/* CONTAINER */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.container {
+  display: block;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  outline: 1px solid teal;
+}
+
+body {
+  font-family: $font-main;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: 1.6;
+
+  color: $color-text;
+}
+
+.main__inner {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+
+  margin-top: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

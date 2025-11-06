@@ -1,0 +1,13 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+@import './base/normalize';
+@import './base/reset';
+@import './base/_typography.scss';
+@import './utils/global';
+
+@import './layout/header';
+@import './layout/sidebar';
+@import './layout/catalog';
+@import './layout/footer';

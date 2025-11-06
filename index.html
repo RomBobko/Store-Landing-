@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Store-Landing</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
   </head>
   <body>
     <header class="header">
@@ -25,7 +25,11 @@
             </ul>
           </nav>
           <form class="search" role="search">
+            <label for="search-input" class="search__label"
+              >Search products</label
+            >
             <input
+              id="search-input"
               type="search"
               class="search__input"
               placeholder="Search products..."
@@ -46,7 +50,8 @@
     </header>
 
     <main class="main">
-      <div class="container">
+      <div class="container main__inner">
+        <!-- Sidebar -->
         <aside class="filters" aria-labelledby="filters-title">
           <h2 id="filters-title">Filters</h2>
 
@@ -193,7 +198,7 @@
       <div class="container footer__inner">
         <!-- Блок бренду/опису -->
         <section class="footer__brand" aria-labelledby="footer-brand-title">
-          <h2 id="footer-brand-title" class="visually-hidden">
+          <h2 id="footer-brand-title" class="footer__brand-title">
             About EliteStore
           </h2>
           <a href="#" class="logo"

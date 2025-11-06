@@ -1,0 +1,14 @@
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
