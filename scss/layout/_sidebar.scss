@@ -1,13 +1,13 @@
 .filters {
   position: sticky;
   top: 80px;
-  max-width: 300px;
+  max-width: 270px;
   width: 100%;
   padding: 15px;
 
-//   border-color: $color-border;
+  // border-color: $color-border;
   border-radius: $radius-md;
-  outline: 1px solid teal;
+  outline: 1px solid #c0c0c0;
 
   &__title {
     margin-bottom: 25px;
@@ -15,5 +15,58 @@
 
     font-size: 18px;
     font-weight: $font-weight-normal;
+  }
+
+  &__group {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+  }
+}
+
+.categories {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  &__item {
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+}
+
+.range-bar {
+  // outline: 1px solid teal;
+  width: 100%;
+}
+
+.rating {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
   }
 }

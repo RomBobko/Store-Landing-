@@ -62,117 +62,132 @@
     <main class="main">
       <div class="container main__inner">
         <!-- Sidebar -->
-        <aside class="filters" aria-labelledby="filters-title">
+        <aside class="filters" aria-describedby="filters-title">
           <h2 id="filters-title" class="filters__title">Filters</h2>
 
-          <form class="filters-form">
-            <fieldset>
-              <legend>Categories</legend>
+          <section
+            class="filters__group"
+            role="group"
+            aria-describedby="categories-title"
+          >
+            <h3 id="categories-title" class="filters__subtitle">
+              Categories
+            </h3>
 
-              <ul class="categories">
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="electronics"
-                    />
-                    Electronics</label
-                  >
-                </li>
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="clothing"
-                    />
-                    Clothing</label
-                  >
-                </li>
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="books"
-                    />
-                    Books</label
-                  >
-                </li>
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="home-garden"
-                    />
-                    Home &amp; Garden</label
-                  >
-                </li>
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="sports"
-                    />
-                    Sports</label
-                  >
-                </li>
-                <li class="categories__item">
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="category"
-                      value="beauty"
-                    />
-                    Beauty</label
-                  >
-                </li>
-              </ul>
-            </fieldset>
+            <ul class="categories__list">
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="electronics"
+                  />Electronics</label
+                >
+              </li>
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="clothing"
+                  />Clothing</label
+                >
+              </li>
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="books"
+                  />Books</label
+                >
+              </li>
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="home-arden"
+                  />Home &amp; Garden</label
+                >
+              </li>
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="sports"
+                  />Sports</label
+                >
+              </li>
+              <li class="categories__item">
+                <label
+                  ><input
+                    type="checkbox"
+                    name=" category"
+                    value="beauty"
+                  />Beauty</label
+                >
+              </li>
+            </ul>
+          </section>
 
-            <fieldset>
-              <legend>Price Range</legend>
+          <section
+            class="filters__group"
+            role="group"
+            aria-describedby="price-title"
+          >
+            <h3 id="price-title" class="filters__subtitle">
+              Price Range
+            </h3>
 
-              <label
-                >Price:
-                <input type="range" name="price" min="0" max="1000" />
-              </label>
-            </fieldset>
+            <label class="range"
+              ><input
+                class="range-bar"
+                type="range"
+                name="price"
+                min="0"
+                max="1000"
+              />
+            </label>
+          </section>
 
-            <fieldset>
-              <legend>Minimum Rating</legend>
+          <section
+            class="filters__group"
+            role="group"
+            aria-describedby="rating-title"
+          >
+            <h3 id="rating-title" class="filters__subtitle">
+              Minimum Rating
+            </h3>
 
-              <ul class="rating">
-                <li class="rating__item">
-                  <label
-                    ><input type="radio" name="rating" value="4" /> 4
-                    +</label
-                  >
-                </li>
-                <li class="rating__item">
-                  <label
-                    ><input type="radio" name="rating" value="3" /> 3
-                    +</label
-                  >
-                </li>
-                <li class="rating__item">
-                  <label
-                    ><input type="radio" name="rating" value="2" /> 2
-                    +</label
-                  >
-                </li>
-                <li class="rating__item">
-                  <label
-                    ><input type="radio" name="rating" value="1" /> 1
-                    +</label
-                  >
-                </li>
-              </ul>
-            </fieldset>
-          </form>
+            <ul class="rating__list">
+              <li class="rating__item">
+                <label
+                  ><input type="radio" name="rating" value="4" /> 4+
+                  Stars</label
+                >
+              </li>
+              <li class="rating__item">
+                <label
+                  ><input type="radio" name="rating" value="3" /> 3+
+                  Stars</label
+                >
+              </li>
+              <li class="rating__item">
+                <label
+                  ><input type="radio" name="rating" value="2" /> 2+
+                  Stars</label
+                >
+              </li>
+              <li class="rating__item">
+                <label
+                  ><input type="radio" name="rating" value="1" /> 1+
+                  Stars</label
+                >
+              </li>
+            </ul>
+          </section>
         </aside>
 
         <section class="catalog" aria-labelledby="catalog-title">
@@ -182,8 +197,9 @@
             </h2>
 
             <div class="catalog__controls">
-              <div role="group" aria-label="View">
+              <div class="view-toggle" role="group" aria-label="View">
                 <button
+                  class="view-toggle__button view-toggle__button--active"
                   type="button"
                   aria-pressed="true"
                   aria-controls="products-list"
@@ -193,6 +209,7 @@
                   b
                 </button>
                 <button
+                  class="view-toggle__button"
                   type="button"
                   aria-pressed="false"
                   aria-controls="products-list"
@@ -202,9 +219,9 @@
                   b
                 </button>
               </div>
-              <label
-                >Sort By
-                <select name="sort">
+              <div class="sort">
+                <label class="sort__label" for="sort">Sort by:</label>
+                <select id="sort" class="sort__select" name="sort">
                   <option value="relevance">Relevance</option>
                   <option value="price-asc">
                     Price: Low to High
@@ -216,7 +233,7 @@
                     Rating: High to Low
                   </option>
                 </select>
-              </label>
+              </div>
             </div>
           </header>
 
@@ -369,28 +386,38 @@
           <h2 id="footer-news-title" class="footer__title">
             Stay Updated
           </h2>
-          <p>
+          <p class="newsletter__text">
             Subscribe to our newsletter for the latest deals and
             updates.
           </p>
 
-          <form class="newsletter-form">
-            <label class="newsletter__input"
-              ><span class="visually-hidden">Email address</span>
+          <form class="newsletter__form" novalidate>
+            <label class="visually-hidden" for="news-email"
+              >Email</label
+            >
+
+            <div class="input-group">
               <input
+                id="news-email"
+                class="input-group__input"
                 type="email"
-                name="email"
                 placeholder="Enter your email"
-            /></label>
+                required
+              />
+              <button
+                class="input-group__btn"
+                type="submit"
+                aria-label="Subscribe"
+              >
+                b
+              </button>
+            </div>
 
-            <button type="submit" aria-label="Subscribe">
-              Subscribe
-            </button>
+            <p class="newsletter__note">
+              By subscribing, you agree to our Privacy Policy and
+              Terms.
+            </p>
           </form>
-
-          <p class="consent">
-            By subscribing, you agree to our Privacy Policy and Terms.
-          </p>
         </section>
       </div>
 

@@ -76,3 +76,24 @@
     background-color: $color-input-bg;
   }
 }
+
+.newsletter {
+  &__form {
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__note {
+    
+  }
+}
+
+.input__group {
+  &__input {
+    width: 300px;
+    // max-width: 350px;
+  }
+}
