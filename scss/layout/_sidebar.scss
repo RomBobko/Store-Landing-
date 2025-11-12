@@ -5,13 +5,16 @@
   width: 100%;
   padding: 15px;
 
-  // border-color: $color-border;
   border-radius: $radius-md;
   outline: 1px solid #c0c0c0;
 
   &__title {
+    @include flex-start(10px);
+    // display: flex;
+    // align-items: center;
+    // gap: 10px;
+    position: relative;
     margin-bottom: 25px;
-    margin-left: 25px;
 
     font-size: 18px;
     font-weight: $font-weight-normal;
@@ -22,8 +25,12 @@
   }
 
   &__subtitle {
-    margin-left: 8px;
-    margin-bottom: 8px;
+    @include flex-center(row, space-between);
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    margin: 0 10px 10px 10px;
+
     font-size: 16px;
     font-weight: $font-weight-normal;
   }

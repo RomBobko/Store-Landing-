@@ -51,9 +51,10 @@
   }
 
   &__legal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-center(row, space-between)
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
   }
 
   &__legal-list {
@@ -70,10 +71,26 @@
   align-items: center;
   gap: 5px;
 
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__item {
-    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 41px;
     height: 40px;
-    background-color: $color-input-bg;
+
+    border: none;
+    border-radius: $radius-lg;
+
+    &:hover {
+      background-color: $color-input-bg;
+    }
   }
 }
 
@@ -87,13 +104,36 @@
   }
 
   &__note {
-    
+    font-size: 10px;
   }
 }
 
-.input__group {
+.input-group {
+  display: flex;
+  margin-bottom: 10px;
+  border: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+
   &__input {
-    width: 300px;
-    // max-width: 350px;
+    width: 250px;
+    height: 35px;
+    padding-left: 12px;
+
+    border: none;
+    background-color: #eeeeee;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 35px;
+
+    background-color: black;
+    border: none;
+    font-size: 20px;
   }
 }

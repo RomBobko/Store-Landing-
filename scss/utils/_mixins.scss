@@ -1,14 +1,18 @@
-@mixin flex-center($direction: row, $gap: 0) {
+@mixin flex-center($direction: row, $justify: center, $gap: 0) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
-  justify-content: center;
+  justify-content: $justify;
   gap: $gap;
 }
 
-@mixin container {
-  width: 100%;
-  max-width: $container-width;
-  margin-inline: auto;
-  padding-inline: 15px;
+@mixin flex-start($gap: 0) {
+  @include flex-center(row, flex-start, $gap)
 }
+
+// @mixin container {
+//   width: 100%;
+//   max-width: $container-width;
+//   margin-inline: auto;
+//   padding-inline: 15px;
+// }
