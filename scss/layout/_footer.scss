@@ -12,22 +12,20 @@
 
   &__title {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: $font-size-medium;
     font-weight: $font-weight-normal;
   }
 
   &__inner {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    @include flex-center(flex-start, 50px);
 
     padding-bottom: 30px;
     margin-bottom: 35px;
 
-    font-size: 12px;
+    font-size: $font-size-small;
     font-weight: $font-weight-normal;
 
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px solid $color-border;
   }
 
   &__brand,
@@ -46,41 +44,30 @@
   }
 
   &__brand-text {
-    font-size: 12px;
+    font-size: $font-size-small;
     margin-bottom: 5px;
   }
 
   &__legal {
-    @include flex-center(row, space-between)
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
+    @include flex-center(space-between);
   }
 
   &__legal-list {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    @include flex-start(12px);
 
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 
 .social {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  @include flex-start(5px);
 
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
 
     width: 41px;
     height: 40px;
@@ -111,8 +98,9 @@
 .input-group {
   display: flex;
   margin-bottom: 10px;
+
   border: transparent;
-  border-radius: 8px;
+  border-radius: $radius-md;
   overflow: hidden;
 
   &__input {
@@ -121,19 +109,17 @@
     padding-left: 12px;
 
     border: none;
-    background-color: #eeeeee;
+    background-color: $color-input-bg;
   }
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    @include flex-center();
+    
     width: 40px;
     height: 35px;
 
-    background-color: black;
     border: none;
+    background-color: $color-primary;
     font-size: 20px;
   }
 }

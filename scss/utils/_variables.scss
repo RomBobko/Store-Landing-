@@ -1,7 +1,10 @@
 $font-main: 'Poppins', sans-serif;
 
 // ---------- Typography ----------
+$font-size-small: 12px;
 $font-size-base: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-large: 700;
@@ -15,38 +18,36 @@ $radius-lg: 10px;
 $color-bg: #ffffff;
 $color-footer-bg: #f9fafb;
 $color-text: rgb(37, 37, 37);
-$color-border: rgba(0, 0, 0, 0.1);
+$color-border: #c0c0c0;
 
 // ---------- Brand / Accent ----------
-$color-primary: #030213;          // головний (для кнопок, акцентів)
-$color-accent: #717182;           // для іконок, muted-тексту
-$color-secondary: #e9ebef;        // для світлих фонів елементів (input, cards)
+$color-primary: #030213;
+$color-accent: #717182;
 
 // ---------- UI ----------
-$color-input-bg: #f3f3f5;         // поле пошуку, інпути
-$color-destructive: #d4183d;      // для бейджів типу -20%, помилок
+$color-input-bg: #f3f3f5;
+$color-destructive: #d4183d;
 
 
 // DARK THEME
 
-.dark {
-  $color-bg: #1c1c1e;
-  $color-text: #fafafa;
-  $color-border: #37373c;
+// .dark {
+//   $color-bg: #1c1c1e;
+//   $color-text: #fafafa;
+//   $color-border: #37373c;
 
-  $color-primary: #f5f5f5;
-  $color-accent: #b4b4b4;
-  $color-secondary: #2a2a2c;
+//   $color-primary: #f5f5f5;
+//   $color-accent: #b4b4b4;
+//   $color-secondary: #2a2a2c;
 
-  $color-input-bg: #37373c;
-  $color-destructive: #7d2319;
-}
+//   $color-input-bg: #37373c;
+//   $color-destructive: #7d2319;
+// }
 
+
+// ADAPIVE
 
 $mobile: 480px;
 $tablet: 768px;
 $laptop: 1200px;
-
-
-
 

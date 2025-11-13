@@ -3,22 +3,20 @@ body {
   font-weight: $font-weight-normal;
   font-size: $font-size-base;
   line-height: 1.6;
-
   color: $color-text;
 }
+
 .container {
   display: block;
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-
-  // outline: 1px solid teal;
 }
 
 .main__inner {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 25px;
 
   padding-top: 20px;
@@ -32,18 +30,18 @@ body {
 .icon {
   &--search {
     position: absolute;
-    left: 10px;
     top: 2px;
-    z-index: 2;
+    left: 10px;
+    z-index: 3;
 
-    fill: $color-text;
+    fill: $color-accent;
   }
 
   &--grid {
-    fill: white;
+    fill: $color-bg;
   }
 
   &--enveloppe {
-    fill: white;
+    fill: $color-bg;
   }
 }

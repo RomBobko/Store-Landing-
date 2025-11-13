@@ -1,54 +1,44 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 
   background: $color-bg;
   backdrop-filter: blur(6px);
   border-bottom: 1px solid $color-border;
 
   &__inner {
-    @include flex-center(row, space-between, 16px);
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // gap: 16px;
+    @include flex-center(space-between);
 
     padding-top: 12px;
     padding-bottom: 12px;
   }
 
   &__center {
-    @include flex-start();
-    // display: flex;
-    // align-items: center;
+    @include flex-start(115px);
     
-    font-size: 16px;
+    font-size: $font-size-medium;
   }
 
   &__actions {
-    @include flex-start(12px);
-    // display: flex;
-    // align-items: center;
-    // gap: 12px;
+    @include flex-start(5px);
   }
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 18px;
+  font-size: $font-size-large;
+  font-weight: $font-weight-large;
   letter-spacing: 0;
 
   color: $color-primary;
 
   &__letter {
     display: inline-block;
-    text-align: center;
-
     width: 30px;
     height: 30px;
     margin-right: 7px;
 
+    text-align: center;
     color: $color-bg;
     background: $color-primary;
 
@@ -57,12 +47,8 @@
 }
 
 .nav {
-  margin-right: 150px;
-
   &__list {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+    @include flex-start(32px);
   }
 }
 
@@ -87,15 +73,8 @@
   }
 }
 
-// header-search__label
-.visually-hidden {
-  @extend %visually-hidden;
-}
-
 .header-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center();
 
   width: 40px;
   height: 40px;

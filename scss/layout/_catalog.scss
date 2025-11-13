@@ -1,22 +1,20 @@
 .catalog {
   display: flex;
-  flex: 1;
   flex-direction: column;
+  flex: 1;
 
   &__controls {
-    display: flex;
-    gap: 30px;
+    @include flex-start(30px);
   }
 
   &__toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center(space-between);
 
     margin-bottom: 20px;
   }
+
   &__title {
-    font-size: 18px;
+    font-size: $font-size-large;
     font-weight: $font-weight-normal;
   }
 
@@ -37,60 +35,50 @@
       grid-template-columns: 1fr;
     }
   }
-
-  &__item {
-    display: inline-block;
-  }
 }
 
 .view-toggle {
   display: flex;
-  border: 1px solid #6d6d6d;
-  border-radius: 6px;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
   overflow: hidden;
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
 
     width: 37px;
     height: 35px;
 
-    font-size: 18px;
+    font-size: $font-size-large;
     border: none;
-    background-color: white;
+    background-color: $color-bg;
 
     &--active {
-      // color: white;
-      background-color: black;
+      background-color: $color-primary;
     }
-    // outline: 1px solid teal;
   }
 }
 
 .sort {
-  display: flex;
-  align-items: center;
+  @include flex-start();
+
   position: relative;
 
   &__label {
+    @include flex-center(center, 5px);
+
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
     top: 8px;
     left: 10px;
   }
 
   &__select {
-    // max-width: 200px;
     width: 260px;
     height: 38px;
     padding-left: 80px;
 
-    border: 1px solid #9e9e9e;
-    border-radius: 6px;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
   }
 }
