@@ -3,11 +3,12 @@
   padding-bottom: 40px;
 
   color: $color-accent;
-  background-color: $color-footer-bg;
+  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: $color-footer-bg;
   border-top: 1px solid $color-border;
 
   &__logo {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   &__title {
@@ -45,7 +46,7 @@
 
   &__brand-text {
     font-size: $font-size-small;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   &__legal {
@@ -77,6 +78,7 @@
 
     &:hover {
       background-color: $color-input-bg;
+      cursor: pointer;
     }
   }
 }
@@ -97,9 +99,9 @@
 
 .input-group {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 
-  border: transparent;
+  border: none;
   border-radius: $radius-md;
   overflow: hidden;
 
@@ -114,12 +116,16 @@
 
   &__button {
     @include flex-center();
-    
+
     width: 40px;
     height: 35px;
 
     border: none;
     background-color: $color-primary;
     font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

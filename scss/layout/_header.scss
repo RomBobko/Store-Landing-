@@ -3,7 +3,8 @@
   top: 0;
   z-index: 100;
 
-  background: $color-bg;
+  // background: $color-bg;
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid $color-border;
 
@@ -16,7 +17,7 @@
 
   &__center {
     @include flex-start(115px);
-    
+
     font-size: $font-size-medium;
   }
 
@@ -79,7 +80,7 @@
   width: 40px;
   height: 40px;
 
-  background-color: $color-bg;
+  background-color: inherit;
   border: none;
   border-radius: $radius-lg;
 

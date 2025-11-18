@@ -4,6 +4,7 @@ body {
   font-size: $font-size-base;
   line-height: 1.6;
   color: $color-text;
+  background: linear-gradient(to bottom left, #01016d, #550101);
 }
 
 .container {
@@ -35,10 +36,6 @@ body {
     z-index: 3;
 
     fill: $color-accent;
-  }
-
-  &--grid {
-    fill: $color-bg;
   }
 
   &--enveloppe {
