@@ -1,7 +1,6 @@
 import { products } from '../data/products.js';
 
-export const catalogEl = document.querySelector('ul[data-role="catalog"]');
-catalogEl.insertAdjacentHTML('beforeend', createCatalogItemsMarkup(products));
+const catalogEl = document.querySelector('ul[data-role="catalog"]');
 
 function createCatalogItemsMarkup(products) {
   return products
@@ -35,7 +34,7 @@ function createCatalogItemsMarkup(products) {
           : '';
 
         return `
-      <li class="product-card" data-category="${category}">
+      <li class="product-card" data-id="${id}" data-category="${category}">
   <article class="product-card__inner">
     <div class="product-card__media">
       <div class="product-card__badges">
@@ -70,3 +69,10 @@ function createCatalogItemsMarkup(products) {
     )
     .join('');
 }
+
+export function renderCatalog(items = products) {
+  catalogEl.innerHTML = createCatalogItemsMarkup(items);
+}
+
+renderCatalog();
+

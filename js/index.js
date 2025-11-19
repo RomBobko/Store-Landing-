@@ -1,4 +1,5 @@
 import { viewToggleBtn } from './modules/viewToggle.js';
-import { catalogEl } from './modules/renderProducts.js';
+import { initFilters } from './modules/filters.js';
 
 viewToggleBtn();
+initFilters();

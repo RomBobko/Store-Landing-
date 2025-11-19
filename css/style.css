@@ -30,8 +30,7 @@ Use a more readable tab size (opinionated).
 */
 html {
   -moz-tab-size: 4;
-  -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
 }
 
 /**
@@ -82,8 +81,7 @@ Text-level semantics
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -338,8 +336,7 @@ body {
   top: 0;
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid #c0c0c0;
 }
 .header__inner {
@@ -429,8 +426,7 @@ body {
   border-radius: 8px;
   border: 1px solid #c0c0c0;
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .filters__title {
   display: flex;
@@ -509,7 +505,7 @@ body {
 
 .view-toggle {
   display: flex;
-  border: 1px solid #c0c0c0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -559,9 +555,15 @@ body {
 }
 
 .product-card {
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 15px;
-  background-color: #dfdede;
+  background-color: rgba(255, 255, 255, 0.7);
   overflow: hidden;
+  transition: scale 0.2s ease;
+}
+.product-card:hover {
+  scale: 1.03;
 }
 .product-card__inner {
   display: flex;
@@ -569,25 +571,35 @@ body {
 }
 .product-card__media {
   position: relative;
+  z-index: 2;
 }
 .product-card__badges {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 4;
 }
 .product-card__favorites {
   position: absolute;
   top: 10px;
   right: 12px;
+  z-index: 5;
   width: 35px;
   height: 35px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 .product-card__img {
+  z-index: 3;
   width: 100%;
   height: 400px;
   background-color: #7b7b7b;
+  object-fit: cover;
+  transition: scale 0.2s ease;
+}
+.product-card:hover .product-card__img {
+  scale: 1.05;
 }
 .product-card__cart-btn {
   display: flex;
@@ -598,12 +610,18 @@ body {
   bottom: 15px;
   left: 15px;
   right: 15px;
+  z-index: 6;
   height: 34px;
   border: none;
   border-radius: 8px;
   background-color: #030213;
   color: #ffffff;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.product-card:hover .product-card__cart-btn {
+  opacity: 1;
 }
 .product-card__cart-btn .icon {
   display: flex;
@@ -625,10 +643,15 @@ body {
   margin-bottom: 10px;
 }
 .product-card__rating {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .product-card__price {
   margin-bottom: 20px;
+}
+.product-card__price-current {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 15px;
 }
 
 .badge {
@@ -647,7 +670,7 @@ body {
   background-color: green;
 }
 .badge--sale {
-  background-color: red;
+  background-color: #d4183d;
 }
 
 .footer {
