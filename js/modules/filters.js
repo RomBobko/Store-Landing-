@@ -1,18 +1,36 @@
 import { products } from '../data/products.js';
 import { renderCatalog } from './catalog.js';
+import { sortProducts } from './sort.js';
 
-const filtersRoot = document.querySelector('aside[data-filters]');
+const filtersRoot = document.querySelector('.js-filters');
 
 const filtersState = {
   categories: new Set(),
   price: null,
   rating: null,
+  sort: 'relevance',
+  search: '',
 };
 
 export function initFilters() {
   if (!filtersRoot) return;
 
   filtersRoot.addEventListener('change', handleFiltersChange);
+
+  const searchInput = document.querySelector('.js-search__input');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      filtersState.search = searchInput.value.trim().toLowerCase();
+
+      applyFilters();
+    });
+  }
+}
+
+export function setSort(sortValue) {
+  filtersState.sort = sortValue;
+
+  applyFilters();
 }
 
 function handleFiltersChange(event) {
@@ -84,5 +102,13 @@ function applyFilters() {
     result = result.filter(product => product.rating >= filtersState.rating);
   }
 
+  if (filtersState.search) {
+    const query = filtersState.search;
+
+    result = result.filter(product => product.title.toLowerCase().includes(query));
+  }
+
+  result = sortProducts(result, filtersState.sort);
+
   renderCatalog(result);
-}
+} 

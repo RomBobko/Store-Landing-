@@ -1,6 +1,6 @@
 import { products } from '../data/products.js';
 
-const catalogEl = document.querySelector('ul[data-role="catalog"]');
+const catalogEl = document.querySelector('.js-catalog__list');
 
 function createCatalogItemsMarkup(products) {
   return products

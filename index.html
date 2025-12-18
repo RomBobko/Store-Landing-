@@ -37,12 +37,12 @@
             <label class="search__label"
               ><span class="visually-hidden">Search products</span>
               <svg class="icon icon--search" width="15" height="15">
-                <use href="images/symbol-defs.svg#icon-search"></use>
+                <use href="./images/symbol-defs.svg#icon-search"></use>
               </svg>
               <input
                 name="search"
                 type="search"
-                class="search__input"
+                class="search__input js-search__input"
                 placeholder="Search products..."
             /></label>
           </form>
@@ -51,12 +51,12 @@
         <div class="header__actions">
           <button class="header-btn" aria-label="Cart">
             <svg class="icon icon--cart" width="20" height="20">
-              <use href="images/symbol-defs.svg#icon-shopping-cart"></use>
+              <use href="./images/symbol-defs.svg#icon-shopping-cart"></use>
             </svg>
           </button>
           <button class="header-btn" aria-label="Account">
             <svg class="icon icon--person" width="20" height="20">
-              <use href="images/symbol-defs.svg#icon-person"></use>
+              <use href="./images/symbol-defs.svg#icon-person"></use>
             </svg>
           </button>
         </div>
@@ -66,11 +66,12 @@
     <main class="main">
       <div class="container main__inner">
         <!-- Сайдбар -->
-        <aside class="filters" aria-describedby="filters-title" data-filters>
+        <aside class="filters js-filters" aria-describedby="filters-title">
           <h2 id="filters-title" class="filters__title">
             <svg class="icon icon--filter" width="17" height="17">
-              <use href="images/symbol-defs.svg#icon-filter"></use></svg
-            >Filters
+              <use href="./images/symbol-defs.svg#icon-filter"></use>
+            </svg>
+            Filters
           </h2>
 
           <section
@@ -81,49 +82,46 @@
             <h3 id="categories-title" class="filters__subtitle">
               Categories
               <svg class="icon icon--arrow-little" width="20" height="20">
-                <use href="images/symbol-defs.svg#icon-arrow-little"></use>
+                <use href="./images/symbol-defs.svg#icon-arrow-little"></use>
               </svg>
             </h3>
 
             <ul class="categories__list">
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input
-                    type="checkbox"
-                    name="category"
-                    value="electronics"
-                  />Electronics</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="electronics" />
+                  Electronics
+                </label>
               </li>
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input
-                    type="checkbox"
-                    name="category"
-                    value="clothing"
-                  />Clothing</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="clothing" />
+                  Clothing
+                </label>
               </li>
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input type="checkbox" name="category" value="books" />Books</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="books" />
+                  Books
+                </label>
               </li>
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input type="checkbox" name="category" value="home-garden" />Home &amp;
-                  Garden</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="home-garden" />
+                  Home &amp; Garden
+                </label>
               </li>
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input type="checkbox" name="category" value="sports" />Sports</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="sports" />
+                  Sports
+                </label>
               </li>
               <li class="categories__item">
-                <label class="filters__label"
-                  ><input type="checkbox" name="category" value="beauty" />Beauty</label
-                >
+                <label class="filters__label">
+                  <input type="checkbox" name="category" value="beauty" />
+                  Beauty
+                </label>
               </li>
             </ul>
           </section>
@@ -132,7 +130,7 @@
             <h3 id="price-title" class="filters__subtitle">
               Price Range
               <svg class="icon icon--arrow-little" width="20" height="20">
-                <use href="images/symbol-defs.svg#icon-arrow-little"></use>
+                <use href="./images/symbol-defs.svg#icon-arrow-little"></use>
               </svg>
             </h3>
 
@@ -145,30 +143,34 @@
             <h3 id="rating-title" class="filters__subtitle">
               Minimum Rating
               <svg class="icon icon--arrow-little" width="20" height="20">
-                <use href="images/symbol-defs.svg#icon-arrow-little"></use>
+                <use href="./images/symbol-defs.svg#icon-arrow-little"></use>
               </svg>
             </h3>
 
             <ul class="rating__list">
               <li class="rating__item">
-                <label class="filters__label"
-                  ><input type="radio" name="rating" value="4" /> 4+ Stars</label
-                >
+                <label class="filters__label">
+                  <input type="radio" name="rating" value="4" />
+                  4+ Stars
+                </label>
               </li>
               <li class="rating__item">
-                <label class="filters__label"
-                  ><input type="radio" name="rating" value="3" /> 3+ Stars</label
-                >
+                <label class="filters__label">
+                  <input type="radio" name="rating" value="3" />
+                  3+ Stars
+                </label>
               </li>
               <li class="rating__item">
-                <label class="filters__label"
-                  ><input type="radio" name="rating" value="2" /> 2+ Stars</label
-                >
+                <label class="filters__label">
+                  <input type="radio" name="rating" value="2" />
+                  2+ Stars
+                </label>
               </li>
               <li class="rating__item">
-                <label class="filters__label"
-                  ><input type="radio" name="rating" value="1" /> 1+ Stars</label
-                >
+                <label class="filters__label">
+                  <input type="radio" name="rating" value="1" />
+                  1+ Stars
+                </label>
               </li>
             </ul>
           </section>
@@ -189,7 +191,7 @@
                   title="Grid View"
                 >
                   <svg class="icon icon--grid" width="19" height="18">
-                    <use href="images/symbol-defs.svg#icon-grid"></use>
+                    <use href="./images/symbol-defs.svg#icon-grid"></use>
                   </svg>
                 </button>
                 <button
@@ -201,17 +203,18 @@
                   title="List View"
                 >
                   <svg class="icon icon--list" width="20" height="20">
-                    <use href="images/symbol-defs.svg#icon-list"></use>
+                    <use href="./images/symbol-defs.svg#icon-list"></use>
                   </svg>
                 </button>
               </div>
               <div class="sort">
                 <label class="sort__label" for="sort">
                   <svg class="icon icon--arrow-up-down" width="12" height="12">
-                    <use href="images/symbol-defs.svg#icon-arrow-up-down"></use></svg
-                  >Sort by:</label
-                >
-                <select id="sort" class="sort__select" name="sort">
+                    <use href="./images/symbol-defs.svg#icon-arrow-up-down"></use>
+                  </svg>
+                  Sort by:
+                </label>
+                <select id="sort" class="sort__select js-sort__select" name="sort">
                   <option value="relevance">Relevance</option>
                   <option value="price-asc">Price: Low to High</option>
                   <option value="price-desc">Price: High to Low</option>
@@ -221,7 +224,7 @@
             </div>
           </header>
 
-          <ul class="catalog__list products--grid" data-role="catalog"></ul>
+          <ul class="catalog__list js-catalog__list products--grid"></ul>
         </section>
       </div>
     </main>
@@ -231,9 +234,10 @@
         <!-- Блок бренду/опису -->
         <section class="footer__brand" aria-labelledby="footer-brand-title">
           <h2 id="footer-brand-title" class="visually-hidden">About EliteStore</h2>
-          <a href="#" class="logo footer__logo"
-            ><span class="logo__letter">E</span>EliteStore</a
-          >
+          <a href="#" class="logo footer__logo">
+            <span class="logo__letter">E</span>
+            EliteStore
+          </a>
           <p class="footer__brand-text">
             Your one-stop destination for quality products at unbeatable prices. Shop with
             confidence and enjoy fast, reliable delivery.
@@ -243,28 +247,30 @@
             <li class="social__item">
               <a href="#" class="social__link" aria-label="Facebook">
                 <svg class="icon icon--facebook" width="20" height="20">
-                  <use href="images/symbol-defs.svg#icon-facebook"></use>
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-
             <li class="social__item">
               <a href="#" class="social__link" aria-label="Twitter">
                 <svg class="icon icon--twitter" width="20" height="20">
-                  <use href="images/symbol-defs.svg#icon-twitter"></use></svg
-              ></a>
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link" aria-label="Instagram">
                 <svg class="icon icon--instagram" width="20" height="20">
-                  <use href="images/symbol-defs.svg#icon-instagram"></use></svg
-              ></a>
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link" aria-label="YouTube">
                 <svg class="icon icon--youtube" width="20" height="20">
-                  <use href="images/symbol-defs.svg#icon-youtube"></use></svg
-              ></a>
+                  <use href="./images/symbol-defs.svg#icon-youtube"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </section>
@@ -335,7 +341,7 @@
               />
               <button class="input-group__button" type="submit" aria-label="Subscribe">
                 <svg class="icon icon--enveloppe" width="20" height="20">
-                  <use href="images/symbol-defs.svg#icon-enveloppe"></use>
+                  <use href="./images/symbol-defs.svg#icon-enveloppe"></use>
                 </svg>
               </button>
             </div>

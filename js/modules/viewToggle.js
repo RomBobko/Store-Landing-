@@ -1,6 +1,6 @@
 export function viewToggleBtn() {
   const toggleGroup = document.querySelector('.view-toggle');
-  const catalogList = document.querySelector('ul[data-role="catalog"]');
+  const catalogList = document.querySelector('.js-catalog__list');
 
   toggleGroup.addEventListener('click', event => {
     const button = event.target.closest('button[data-view]');

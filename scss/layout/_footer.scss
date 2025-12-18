@@ -61,7 +61,7 @@
 }
 
 .social {
-  @include flex-start(5px);
+  @include flex-start(15px);
 
   &__link {
     @include flex-center();
