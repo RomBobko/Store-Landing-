@@ -2,9 +2,10 @@
   "name": "store-landing-",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "node js/modules/building.js"
+    "test": "node js/modules/building.js",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,10 @@
   },
   "homepage": "https://github.com/RomBobko/Store-Landing-#readme",
   "dependencies": {
-    "lodash.debounce": "^4.0.8"
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
   }
 }
